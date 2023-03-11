@@ -9,8 +9,14 @@
         create: create,
         update: update,
       });
+
+      var cat, catcher, cursors, txtScore, score;
+
       function preload() {
         //load in assets needed
+        game.load.image("cat", "img/cat.png");
+        game.load.image("catcher", "img/catcher.png");
+        game.load.image("bg", "img/bg.png");
       }
       function create() {
         //setup game
