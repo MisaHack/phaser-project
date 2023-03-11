@@ -10,18 +10,24 @@
         update: update,
       });
 
+      var cat, catcher, cursor, txtScore, score;
+
       function preload() {
         //load in assets needed
+        game.load.image("cat", "img/cat.png");
+        game.load.image("catcher", "img/catcher.png");
+        game.load.image("bg", "img/bg.png");
+        game.add.sprite(0, 0, "bg");
       }
 
       function create() {
         //setup game
       }
 
-      function update() {}
+      function update() {
+        //run game loop code
+      }
     </script>
   </head>
-  <body>
-    The content of the document......
-  </body>
+  <body></body>
 </html>
