@@ -1,1 +1,3 @@
 https://learn.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo?view=vs-2022
+
+https://www.alphr.com/use-prettier-vs-code/
