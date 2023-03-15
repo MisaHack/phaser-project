@@ -33,9 +33,35 @@
         score = 0;
         var style = { font: "20px Arial", fill: "#FFF" };
         txtScore = game.add.text(10, 10, score.toString(), style);
+        cursors = input.keyboard.createCursorKeys();
       }
       function update() {
-        //run game lopp code
+        //run game loop code
+        if (cursors.left.isDown) {
+          catcher.x -= 5;
+          catcher.scale.x = 1;
+        }
+
+        if (cursors.right.isDown) {
+          catcher.x += 5;
+          catcher.scale.x = -1;
+        }
+
+        if (cursors.up.isDown) {
+          catcher.y -= 5;
+        }
+
+        if (cursors.down.isDown) {
+          catcher.y += 5;
+        }
+
+        game.physics.arcade.overlap(cat, catcher, catHitHandler);
+      }
+      function catHitHandler(catcherObject, catObject) {
+        catObject.x = Math.random() * game.width;
+        catObject.y = Math.random() * game.height;
+        score++;
+        txtScore.setText(score.toString());
       }
     </script>
   </head>
